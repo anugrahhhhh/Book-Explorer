@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Book Explorer</h1>
+    <form id="add-book-form">
+      <input type="text" id="book-title" placeholder="Book Title" required />
+      <input type="number" id="book-year" placeholder="Year" required />
+      <input type="text" id="book-category" placeholder="Category" required />
+      <input type="number" id="book-rating" placeholder="Rating (1-5)" min="1" max="5" required />
+      <button type="submit">Add Book</button>
+    </form>
+    <div class="search-container">
+      <input type="text" id="search-book" placeholder="Search books..." />
+      <button id="search-button">Search</button>
+    </div>
+    <div class="filter-container">
+      <label for="sort-books">Sort By:</label>
+      <select id="sort-books">
+        <option value="title">Title</option>
+        <option value="year">Year</option>
+        <option value="rating">Rating</option>
+      </select>
+      <button id="show-favorites">Show Favorites</button>
+    </div>
+  </header>
+  <main>
+    <div id="book-list"></div>
+    <div id="pagination"></div>
+  </main>
+  <footer>
+    <p>&copy; Created by: Anugrah Putra Al Fatih</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

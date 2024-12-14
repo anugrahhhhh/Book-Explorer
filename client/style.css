@@ -1,0 +1,252 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8f8; /* Cream background */
+    color: #1a1a1a; /* Dark text color */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #56c6c6, #82e6e6); /* Tosca gradient */
+    color: #ffffff;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#add-book-form {
+    margin-top: 20px;
+}
+
+header input[type="text"],
+header input[type="number"] {
+    padding: 14px;
+    margin: 8px;
+    border-radius: 8px;
+    border: 1px solid #82e6e6;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 270px;
+    background-color: #f0f8f8; /* Cream */
+    color: #1a1a1a; /* Dark text */
+}
+
+header button {
+    padding: 14px;
+    margin: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.1rem;
+    background-color: #007d8f; /* Deep Tosca */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+header button:hover {
+    background-color: #005f6b; /* Darker Tosca */
+    transform: scale(1.05);
+}
+
+/* Search Container */
+.search-container {
+    margin-top: 20px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#search-book {
+    padding: 12px;
+    width: 270px;
+    border-radius: 8px;
+    border: 1px solid #82e6e6;
+    font-size: 1.1rem;
+    background-color: #f0f8f8; /* Cream */
+    color: #1a1a1a; /* Dark text */
+}
+
+#search-button {
+    padding: 14px;
+    background-color: #007d8f; /* Deep Tosca */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 12px;
+    font-size: 1.1rem;
+}
+
+#search-button:hover {
+    background-color: #005f6b; /* Darker Tosca */
+    transform: scale(1.05);
+}
+
+/* Main content */
+main {
+    padding: 50px 20px;
+}
+
+#book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+/* book Cards */
+.book-card {
+    background-color: #ffffff; /* White card */
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.3);
+}
+
+.book-card h2 {
+    font-size: 1.8em;
+    margin-bottom: 12px;
+    color: #007d8f; /* Deep Tosca */
+    text-align: center;
+}
+
+.book-card p {
+    font-size: 1.2em;
+    color: #333333; /* Darker gray text */
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.book-card button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 6px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Buttons inside book card */
+.book-card button:nth-child(1) {
+    background-color: #007d8f; /* Deep Tosca */
+    color: white;
+}
+
+.book-card button:nth-child(1):hover {
+    background-color: #005f6b; /* Darker Tosca */
+    transform: scale(1.05);
+}
+
+.book-card button:nth-child(2) {
+    background-color: #82e6e6; /* Light Tosca */
+    color: white;
+}
+
+.book-card button:nth-child(2):hover {
+    background-color: #56c6c6; /* Slightly darker Tosca */
+    transform: scale(1.05);
+}
+
+/* Pagination */
+#pagination {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pagination-button {
+    padding: 12px 18px;
+    margin: 0 10px;
+    background-color: #56c6c6; /* Light Tosca */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.pagination-button:hover {
+    background-color: #007d8f; /* Deep Tosca */
+    transform: scale(1.05);
+}
+
+.pagination-button.active {
+    background-color: #003f47; /* Very Dark Tosca */
+    color: white;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #56c6c6; /* Light Tosca */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 1.1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header input[type="text"],
+    header input[type="number"],
+    header button {
+        width: 100%;
+    }
+
+    #book-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    #search-book {
+        width: 90%;
+    }
+
+    #book-list {
+        grid-template-columns: 1fr;
+    }
+}
